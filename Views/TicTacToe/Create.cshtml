@@ -1,0 +1,108 @@
+﻿@model TicTacToe.Models.TicTacToeModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TicTacToeModel</legend>
+
+        <div class="editor-label">
+            Top Left
+            @*@Html.LabelFor(model => model.topLeft)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.topLeft)
+            @Html.ValidationMessageFor(model => model.topLeft)
+        </div>
+
+        <div class="editor-label">
+            Top Middle
+            @*@Html.LabelFor(model => model.topMiddle)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.topMiddle)
+            @Html.ValidationMessageFor(model => model.topMiddle)
+        </div>
+
+        <div class="editor-label">
+            Top Right
+            @*@Html.LabelFor(model => model.topRight)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.topRight)
+            @Html.ValidationMessageFor(model => model.topRight)
+        </div>
+
+        <div class="editor-label">
+            Center Left
+            @*@Html.LabelFor(model => model.centerLeft)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.centerLeft)
+            @Html.ValidationMessageFor(model => model.centerLeft)
+        </div>
+
+        <div class="editor-label">
+            Center Middle
+            @*@Html.LabelFor(model => model.centerMiddle)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.centerMiddle)
+            @Html.ValidationMessageFor(model => model.centerMiddle)
+        </div>
+
+        <div class="editor-label">
+            Center Right
+            @*@Html.LabelFor(model => model.centerRight)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.centerRight)
+            @Html.ValidationMessageFor(model => model.centerRight)
+        </div>
+
+        <div class="editor-label">
+            Bottom Left
+            @*@Html.LabelFor(model => model.bottomLeft)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bottomLeft)
+            @Html.ValidationMessageFor(model => model.bottomLeft)
+        </div>
+
+        <div class="editor-label">
+            Bottom Middle
+            @*@Html.LabelFor(model => model.bottomMiddle)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bottomMiddle)
+            @Html.ValidationMessageFor(model => model.bottomMiddle)
+        </div>
+
+        <div class="editor-label">
+            Bottom Right
+            @*@Html.LabelFor(model => model.bottomRight)*@
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bottomRight)
+            @Html.ValidationMessageFor(model => model.bottomRight)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

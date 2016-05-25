@@ -1,0 +1,90 @@
+﻿@model TicTacToe.Models.TicTacToeModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>TicTacToeModel</legend>
+
+    <div class="display-label">
+        Top Left
+         @*@Html.DisplayNameFor(model => model.topLeft)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.topLeft)
+    </div>
+
+    <div class="display-label">
+        Top Middle
+         @*@Html.DisplayNameFor(model => model.topMiddle)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.topMiddle)
+    </div>
+
+    <div class="display-label">
+        Top Right
+         @*@Html.DisplayNameFor(model => model.topRight)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.topRight)
+    </div>
+
+    <div class="display-label">
+        Center Left
+         @*@Html.DisplayNameFor(model => model.centerLeft)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.centerLeft)
+    </div>
+
+    <div class="display-label">
+        Center Middle
+         @*@Html.DisplayNameFor(model => model.centerMiddle)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.centerMiddle)
+    </div>
+
+    <div class="display-label">
+        Center Right
+         @*@Html.DisplayNameFor(model => model.centerRight)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.centerRight)
+    </div>
+
+    <div class="display-label">
+        Bottom Left
+         @*@Html.DisplayNameFor(model => model.bottomLeft)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bottomLeft)
+    </div>
+
+    <div class="display-label">
+        Bottom Middle
+         @*@Html.DisplayNameFor(model => model.bottomMiddle)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bottomMiddle)
+    </div>
+
+    <div class="display-label">
+        Bottom Right
+         @*@Html.DisplayNameFor(model => model.bottomRight)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bottomRight)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

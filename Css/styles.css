@@ -1,0 +1,19 @@
+﻿body {
+}
+
+table {
+    border-spacing:0px;
+}
+
+td {
+    padding:0px;
+}
+
+.table {
+   
+}
+    .table-input {
+        width:100px;
+        height:100px;
+        font-size:25px;
+    }

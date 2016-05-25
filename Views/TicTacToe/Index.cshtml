@@ -1,0 +1,104 @@
+﻿@model IEnumerable<TicTacToe.Models.TicTacToeModel>
+
+@{
+    ViewBag.Title = "Saved Games";
+}
+
+<h2>Saved Games</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Top Left
+            @*@Html.DisplayNameFor(model => model.topLeft)*@
+        </th>
+        <th>
+            Top Middle
+            @*@Html.DisplayNameFor(model => model.topMiddle)*@
+        </th>
+        <th>
+            Top Right
+            @*@Html.DisplayNameFor(model => model.topRight)*@
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Center Left
+            @*@Html.DisplayNameFor(model => model.centerLeft)*@
+        </th>
+        <th>
+            Center Middle
+            @*@Html.DisplayNameFor(model => model.centerMiddle)*@
+        </th>
+        <th>
+            Center Right
+            @*@Html.DisplayNameFor(model => model.centerRight)*@
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            Bottom Left
+            @*@Html.DisplayNameFor(model => model.bottomLeft)*@
+        </th>
+        <th>
+            Bottom Middle
+            @*@Html.DisplayNameFor(model => model.bottomMiddle)*@
+        </th>
+        <th>
+            Bottom Right
+            @*@Html.DisplayNameFor(model => model.bottomRight)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.topLeft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topMiddle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topRight)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.centerLeft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.centerMiddle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.centerRight)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bottomLeft)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bottomMiddle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bottomRight)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <hr style="width:auto;" />
+        </td>
+    </tr>
+}
+
+</table>
